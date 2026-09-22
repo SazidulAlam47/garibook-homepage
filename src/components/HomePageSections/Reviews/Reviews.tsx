@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "../../ui/Container";
 import ReviewsCard, { type ReviewItem } from "./ReviewsCard";
 
@@ -13,6 +13,7 @@ const reviewsList: ReviewItem[] = [
         occupation: "Banker",
         thumbnail: thumb1,
         videoId: "JsBwaJ_VIcA",
+        rating: 5,
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ const reviewsList: ReviewItem[] = [
         occupation: "Banker",
         thumbnail: thumb2,
         videoId: "CsxeEof1T3M",
+        rating: 5,
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ const reviewsList: ReviewItem[] = [
         occupation: "Service Holder",
         thumbnail: thumb3,
         videoId: "8ma9XEGhi5s",
+        rating: 5,
     },
 ];
 
@@ -44,6 +47,25 @@ const Reviews = () => {
     const handleNext = () => {
         setStartIndex((prev) => Math.min(maxIndex, prev + 1));
     };
+
+    useEffect(() => {
+        if (!selectedVideo) return;
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setSelectedVideo(null);
+            }
+        };
+
+        const originalOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = originalOverflow;
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [selectedVideo]);
 
     return (
         <section className="py-16 sm:py-24 bg-[#f1f6ff] relative overflow-hidden">
