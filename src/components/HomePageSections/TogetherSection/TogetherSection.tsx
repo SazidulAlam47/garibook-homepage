@@ -4,17 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../../ui/Container";
 import TogetherCard from "./TogetherCard";
 
-import airportImg from "../../../assets/Airport Rental_Webp.webp";
-import familyImg from "../../../assets/family_trips.webp";
-import tourImg from "../../../assets/Group Tour_Webp.webp";
+import { togetherCards } from "../../../constants/together.constant";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const togetherCards = [
-    { id: "airport", title: "Airport Rentals", image: airportImg },
-    { id: "family", title: "Family Trips", image: familyImg },
-    { id: "tours", title: "Long Tours", image: tourImg },
-];
 
 const TogetherSection = () => {
     const sectionRef = useRef<HTMLDivElement>(null);

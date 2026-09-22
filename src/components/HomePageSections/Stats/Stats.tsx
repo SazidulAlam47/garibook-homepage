@@ -5,18 +5,7 @@ import Container from "../../ui/Container";
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface StatItem {
-    label: string;
-    targetValue: number;
-    hasPlus: boolean;
-}
-
-const statsData: StatItem[] = [
-    { label: "Trip Requests", targetValue: 300000, hasPlus: true },
-    { label: "Total Customers", targetValue: 850000, hasPlus: true },
-    { label: "Active Drivers", targetValue: 35000, hasPlus: true },
-    { label: "District Covered", targetValue: 64, hasPlus: false },
-];
+import { statsData } from "../../../constants/stats.constant";
 
 const Stats = () => {
     const sectionRef = useRef<HTMLDivElement>(null);

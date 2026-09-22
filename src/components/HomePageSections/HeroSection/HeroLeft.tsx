@@ -1,10 +1,5 @@
 import { useState, useEffect } from "react";
-
-const titles = [
-    { prefix: "Assurance of Effortless ", highlight: "Travel" },
-    { prefix: "Luxury ", highlight: "Trips", suffix: " with Comfort" },
-    { prefix: "Your ", highlight: "Journey", suffix: " Starts Here ..." },
-];
+import { heroTitles as titles } from "../../../constants/hero.constant";
 
 const HeroLeft = () => {
     const [titleIndex, setTitleIndex] = useState(0);

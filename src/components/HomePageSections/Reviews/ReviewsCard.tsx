@@ -1,16 +1,4 @@
-export interface ReviewItem {
-    id: number;
-    name: string;
-    occupation: string;
-    thumbnail: string;
-    videoId: string;
-    rating?: number;
-}
-
-interface ReviewsCardProps {
-    item: ReviewItem;
-    onPlay: (videoId: string) => void;
-}
+import type { ReviewsCardProps } from "../../../types/reviews.type";
 
 const ReviewsCard = ({ item, onPlay }: ReviewsCardProps) => {
     const rating = item.rating || 5;

@@ -1,8 +1,4 @@
-interface FreedomSingleProps {
-    icon: string;
-    title: string;
-    description: string;
-}
+import type { FreedomSingleProps } from "../../../types/freedom.type";
 
 const FreedomSingle = ({ icon, title, description }: FreedomSingleProps) => {
     return (

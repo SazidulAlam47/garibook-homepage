@@ -5,32 +5,9 @@ import Container from "../../ui/Container";
 import FreedomSingle from "./FreedomSingle";
 
 import freedomBanner from "../../../assets/garibook_freedom.webp";
-import carIcon from "../../../assets/car.svg";
-import driveIcon from "../../../assets/drive.svg";
-import priceIcon from "../../../assets/price.svg";
+import { freedomFeatures } from "../../../constants/freedom.constant";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const freedomFeatures = [
-    {
-        id: "car",
-        icon: carIcon,
-        title: "Choose the Car",
-        description: "Pick what suits your comfort.",
-    },
-    {
-        id: "driver",
-        icon: driveIcon,
-        title: "Choose the Driver",
-        description: "Based on ratings and reviews.",
-    },
-    {
-        id: "fare",
-        icon: priceIcon,
-        title: "Choose the Fare",
-        description: "Select the bid that fits your budget.",
-    },
-];
 
 const FreedomSection = () => {
     const sectionRef = useRef<HTMLDivElement>(null);

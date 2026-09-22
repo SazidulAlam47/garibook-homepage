@@ -1,4 +1,10 @@
 import { Link } from "react-router";
+import {
+    garibookLinks,
+    servicesLinks,
+    partnerLinks,
+    contactDetails,
+} from "../../../constants/footer.constant";
 
 const FooterUpper = () => {
     return (
@@ -10,36 +16,24 @@ const FooterUpper = () => {
                         garibook
                     </h6>
                     <ul className="flex flex-col gap-3 text-sm text-gray-400">
-                        <li>
-                            <Link to="/about-us" className="hover:text-white transition-colors">
-                                About Us
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/passenger-speak" className="hover:text-white transition-colors">
-                                Customer Reviews
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/" className="hover:text-white transition-colors">
-                                Career
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/newsrooms" className="hover:text-white transition-colors">
-                                Newsroom
-                            </Link>
-                        </li>
-                        <li>
-                            <a
-                                href="https://map.garibook.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-white transition-colors"
-                            >
-                                Garibook Map
-                            </a>
-                        </li>
+                        {garibookLinks.map((link) => (
+                            <li key={link.label}>
+                                {link.isExternal ? (
+                                    <a
+                                        href={link.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-white transition-colors"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ) : (
+                                    <Link to={link.href} className="hover:text-white transition-colors">
+                                        {link.label}
+                                    </Link>
+                                )}
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
@@ -49,26 +43,13 @@ const FooterUpper = () => {
                         Services
                     </h6>
                     <ul className="flex flex-col gap-3 text-sm text-gray-400">
-                        <li>
-                            <Link to="/" className="hover:text-white transition-colors">
-                                Intercity Rental
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/" className="hover:text-white transition-colors">
-                                Airport Pick and Drop
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/" className="hover:text-white transition-colors">
-                                Hourly Rental
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/vehicle-management-system" className="hover:text-white transition-colors">
-                                Vehicle Management System (VMS)
-                            </Link>
-                        </li>
+                        {servicesLinks.map((link) => (
+                            <li key={link.label}>
+                                <Link to={link.href} className="hover:text-white transition-colors">
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
@@ -78,21 +59,13 @@ const FooterUpper = () => {
                         Become Our Partner
                     </h6>
                     <ul className="flex flex-col gap-3 text-sm text-gray-400">
-                        <li>
-                            <Link to="/earn-with-garibook" className="hover:text-white transition-colors">
-                                Become a Smart Driver
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/club" className="hover:text-white transition-colors">
-                                Become a member of Garibook Club
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/business" className="hover:text-white transition-colors">
-                                Garibook Business for Corporate Travel
-                            </Link>
-                        </li>
+                        {partnerLinks.map((link) => (
+                            <li key={link.label}>
+                                <Link to={link.href} className="hover:text-white transition-colors">
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
@@ -102,19 +75,22 @@ const FooterUpper = () => {
                         Contacts
                     </h6>
                     <ul className="flex flex-col gap-3 text-sm text-gray-400">
-                        <li>
-                            <a href="mailto:support@garibook.com" className="hover:text-white transition-colors">
-                                support@garibook.com
-                            </a>
-                        </li>
-                        <li className="leading-relaxed">
-                            Police Plaza Concord Tower -01, 13th Floor, Plot-02, Road- 144, Gulshan, Dhaka-1212
-                        </li>
-                        <li>
-                            <a href="tel:09678112233" className="hover:text-white font-semibold transition-colors">
-                                +88 09 678 11 22 33
-                            </a>
-                        </li>
+                        {contactDetails.map((contact, idx) => (
+                            <li key={idx} className={contact.type === "address" ? "leading-relaxed" : ""}>
+                                {contact.href ? (
+                                    <a
+                                        href={contact.href}
+                                        className={`hover:text-white transition-colors ${
+                                            contact.type === "phone" ? "font-semibold" : ""
+                                        }`}
+                                    >
+                                        {contact.content}
+                                    </a>
+                                ) : (
+                                    contact.content
+                                )}
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

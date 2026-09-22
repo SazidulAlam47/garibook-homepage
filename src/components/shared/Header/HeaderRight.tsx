@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-
-interface HeaderRightProps {
-    onToggleMobileMenu?: () => void;
-    isMobileMenuOpen?: boolean;
-}
+import type { HeaderRightProps } from "../../../types/header.type";
 
 const HeaderRight = ({ onToggleMobileMenu, isMobileMenuOpen }: HeaderRightProps) => {
     const [language, setLanguage] = useState<"en" | "bn">("en");

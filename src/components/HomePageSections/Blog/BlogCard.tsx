@@ -1,17 +1,5 @@
 import { Link } from "react-router";
-
-export interface BlogItem {
-    id: number;
-    title: string;
-    subTitle: string;
-    image: string;
-    date: string;
-    slug: string;
-}
-
-interface BlogCardProps {
-    item: BlogItem;
-}
+import type { BlogCardProps } from "../../../types/blog.type";
 
 const BlogCard = ({ item }: BlogCardProps) => {
     return (

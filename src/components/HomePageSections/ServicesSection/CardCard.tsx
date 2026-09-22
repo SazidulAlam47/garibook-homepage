@@ -1,10 +1,4 @@
-interface CardCardProps {
-    icon: string;
-    title: string;
-    description: string;
-    isActive?: boolean;
-    onClick?: () => void;
-}
+import type { CardCardProps } from "../../../types/services.type";
 
 const CardCard = ({ icon, title, description, isActive, onClick }: CardCardProps) => {
     return (

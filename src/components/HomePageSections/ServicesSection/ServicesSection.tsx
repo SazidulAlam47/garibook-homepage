@@ -5,46 +5,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../../ui/Container";
 import CardCard from "./CardCard";
 
-import intercityIcon from "../../../assets/intercity_car_rental.svg";
-import rideshareIcon from "../../../assets/rideshare.svg";
-import airportRentalIcon from "../../../assets/airport_rental.svg";
-import hourlyRentalIcon from "../../../assets/hourly_rental.svg";
-
 import businessImg from "../../../assets/busines.jpeg";
 import clubImg from "../../../assets/garibook_club.jpg";
 import vmsImg from "../../../assets/Frame_1000001473.png";
 import rightArrow from "../../../assets/right-arrow.png";
 
+import type { ServiceTab } from "../../../types/services.type";
+import { ridesServices } from "../../../constants/services.constant";
+
 gsap.registerPlugin(ScrollTrigger);
-
-type ServiceTab = "rides" | "business" | "club" | "vms";
-
-const ridesServices = [
-    {
-        id: "intercity",
-        title: "Intercity Car Rental",
-        description: "Travel between cities with comfort and confidence.",
-        icon: intercityIcon,
-    },
-    {
-        id: "rideshare",
-        title: "Ride share",
-        description: "Go anywhere in the city, quickly and easily.",
-        icon: rideshareIcon,
-    },
-    {
-        id: "airport",
-        title: "Airport Rental",
-        description: "Whether you’re flying abroad or returning home, enjoy a comfortable and worry-free airport journey.",
-        icon: airportRentalIcon,
-    },
-    {
-        id: "hourly",
-        title: "Hourly Rental",
-        description: "Rent a car by the hour, tailored to your needs.",
-        icon: hourlyRentalIcon,
-    },
-];
 
 const ServicesSection = () => {
     const [activeTab, setActiveTab] = useState<ServiceTab>("rides");

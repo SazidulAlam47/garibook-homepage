@@ -6,57 +6,15 @@ import calendarIcon from "../../../assets/fi_12516022.svg";
 import downArrow from "../../../assets/Down_Arrow_3_.png";
 import rightArrow from "../../../assets/right-arrow.png";
 
-// Car images
-import sedanPremiumImg from "../../../assets/1car_configuration1790064590387752.png";
-import sedanImg from "../../../assets/1car_configuration1790064556396506.png";
-import noahImg from "../../../assets/1car_configuration1790064571661334.png";
-import hiaceImg from "../../../assets/1car_configuration1790064527400306.png";
-import proboxImg from "../../../assets/probox.png";
-import chanderGariImg from "../../../assets/chander_gari.png";
-
-export interface CarOption {
-    id: number;
-    name: string;
-    seat: string;
-    image: string;
-}
-
-const availableCars: CarOption[] = [
-    { id: 1, name: "Sedan Premium", seat: "4 Seats", image: sedanPremiumImg },
-    { id: 2, name: "Sedan", seat: "4 Seats", image: sedanImg },
-    { id: 3, name: "Noah", seat: "7 Seats", image: noahImg },
-    { id: 4, name: "HiAce", seat: "11 Seats", image: hiaceImg },
-    { id: 5, name: "Sedan Economy", seat: "4 Seats", image: proboxImg },
-    { id: 6, name: "Chander Gari", seat: "8 Seats", image: chanderGariImg },
-];
-
-const airportList = [
-    "Hazrat Shahjalal International Airport, Dhaka",
-    "Shah Amanat International Airport, Chattogram",
-    "Osmani International Airport, Sylhet",
-    "Saidpur Airport, Nilphamari",
-    "Cox's Bazar Airport, Cox's Bazar",
-    "Jessore Airport, Jashore",
-    "Barisal Airport, Barishal",
-];
-
-const popularCities = [
-    "Gulshan, Dhaka",
-    "Dhanmondi, Dhaka",
-    "Uttara, Dhaka",
-    "Chattogram City",
-    "Sylhet Sadar",
-    "Cox's Bazar",
-    "Gazipur",
-    "Cumilla",
-];
+import type { CarOption, RentalTabType, TripType, AirportDirectionType } from "../../../types/rental.type";
+import { availableCars, airportList, popularCities } from "../../../constants/rental.constant";
 
 const RentalSelection = () => {
-    const [activeTab, setActiveTab] = useState<"car" | "airport">("car");
+    const [activeTab, setActiveTab] = useState<RentalTabType>("car");
     const [selectedCar, setSelectedCar] = useState<CarOption | null>(null);
     const [isCarDropdownOpen, setIsCarDropdownOpen] = useState(false);
-    const [tripType, setTripType] = useState<"oneWay" | "roundWay" | "hourly">("oneWay");
-    const [airportDirection, setAirportDirection] = useState<"fromAirport" | "fromHome">("fromAirport");
+    const [tripType, setTripType] = useState<TripType>("oneWay");
+    const [airportDirection, setAirportDirection] = useState<AirportDirectionType>("fromAirport");
 
     const [pickupLocation, setPickupLocation] = useState("");
     const [dropoffLocation, setDropoffLocation] = useState("");

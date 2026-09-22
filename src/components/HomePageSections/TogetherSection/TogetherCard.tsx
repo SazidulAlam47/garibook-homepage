@@ -1,7 +1,4 @@
-interface TogetherCardProps {
-    image: string;
-    title: string;
-}
+import type { TogetherCardProps } from "../../../types/together.type";
 
 const TogetherCard = ({ image, title }: TogetherCardProps) => {
     return (

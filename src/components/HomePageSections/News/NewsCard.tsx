@@ -1,16 +1,4 @@
-export interface NewsItem {
-    id: number;
-    title: string;
-    subText: string;
-    image: string;
-    brandLogo: string;
-    date: string;
-    url: string;
-}
-
-interface NewsCardProps {
-    item: NewsItem;
-}
+import type { NewsCardProps } from "../../../types/news.type";
 
 const NewsCard = ({ item }: NewsCardProps) => {
     return (

@@ -2,16 +2,9 @@ import {
     cloneElement,
     forwardRef,
     isValidElement,
-    type HTMLAttributes,
-    type ReactNode,
 } from "react";
 import { cn } from "../../utils/cn";
-
-type ContainerProps = {
-    asChild?: boolean;
-    children: ReactNode;
-    className?: string;
-} & HTMLAttributes<HTMLDivElement>;
+import type { ContainerProps } from "../../types/container.type";
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
     ({ asChild, children, className, ...props }, ref) => {

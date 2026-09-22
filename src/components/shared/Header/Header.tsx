@@ -3,17 +3,9 @@ import { Link } from "react-router";
 import Container from "../../ui/Container";
 import HeaderLeft from "./HeaderLeft";
 import HeaderRight from "./HeaderRight";
+import { navLinks } from "../../../constants/header.constant";
 import logoVector from "../../../assets/logo-vector.png";
 import logo from "../../../assets/gaibook-logo.svg";
-
-const navLinks = [
-    { label: "About Us", href: "/about-us" },
-    { label: "Earn With Garibook", href: "/earn-with-garibook" },
-    { label: "Garibook Business", href: "/business" },
-    { label: "Garibook Club", href: "/club" },
-    { label: "Campaign", href: "/campaign" },
-    { label: "Blogs", href: "/blogs" },
-];
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);

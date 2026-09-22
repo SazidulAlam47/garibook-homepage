@@ -1,6 +1,7 @@
 import Container from "../../ui/Container";
 import driverAppImg from "../../../assets/no_commission_app_screen.png";
 import rightArrow from "../../../assets/right-arrow.png";
+import { SMART_DRIVER_APP_URL } from "../../../constants/appPromotion.constant";
 
 const AppPromotion = () => {
     return (
@@ -23,7 +24,7 @@ const AppPromotion = () => {
                             </h3>
 
                             <a
-                                href="https://play.google.com/store/search?q=garibook%20smart%20driver&c=apps"
+                                href={SMART_DRIVER_APP_URL}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="theme-primary-btn group !w-full sm:!w-auto !justify-between"

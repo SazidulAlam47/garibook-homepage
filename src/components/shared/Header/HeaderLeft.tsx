@@ -1,18 +1,7 @@
 import { Link } from "react-router";
 import logo from "../../../assets/gaibook-logo.svg";
-
-interface HeaderLeftProps {
-    onLinkClick?: () => void;
-}
-
-const navLinks = [
-    { label: "About Us", href: "/about-us" },
-    { label: "Earn With Garibook", href: "/earn-with-garibook" },
-    { label: "Garibook Business", href: "/business" },
-    { label: "Garibook Club", href: "/club" },
-    { label: "Campaign", href: "/campaign" },
-    { label: "Blogs", href: "/blogs" },
-];
+import { navLinks } from "../../../constants/header.constant";
+import type { HeaderLeftProps } from "../../../types/header.type";
 
 const HeaderLeft = ({ onLinkClick }: HeaderLeftProps) => {
     return (
