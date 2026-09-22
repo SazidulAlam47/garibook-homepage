@@ -15,7 +15,10 @@ type ContainerProps = {
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
     ({ asChild, children, className, ...props }, ref) => {
-        const mergedClassName = cn("container mx-auto px-3 md:px-6", className);
+        const mergedClassName = cn(
+            "w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8",
+            className,
+        );
 
         if (asChild && isValidElement(children)) {
             return cloneElement(children, {

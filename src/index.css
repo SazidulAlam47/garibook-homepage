@@ -1,1 +1,80 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-gb: #0e52ff;
+  --color-warning-gb: #efc30c;
+  --color-warning-accent: #fdd300;
+  --color-light-gray-gb: #f1f6ff;
+  --color-dark-gb: #121212;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Garibook button styles matching reference */
+.theme-primary-btn {
+  border-radius: 15px;
+  background-color: #0e52ff;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 14px 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(14, 82, 255, 0.25);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.theme-primary-btn:hover {
+  background-color: #003edc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 82, 255, 0.35);
+}
+
+.theme-warning-btn {
+  border-radius: 15px;
+  background-color: #fdd300;
+  color: #121212;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 14px 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(253, 211, 0, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.theme-warning-btn:hover {
+  background-color: #efc30c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 195, 12, 0.4);
+}
+
+/* Typing cursor animation */
+.typing-cursor:after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+  color: #0e52ff;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
