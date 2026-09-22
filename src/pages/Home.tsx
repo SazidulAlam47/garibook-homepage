@@ -13,20 +13,20 @@ import TogetherSection from "../components/HomePageSections/TogetherSection/Toge
 
 const Home = () => {
     return (
-        <>
+        <main className="min-h-screen flex flex-col bg-white">
             <HeroSection />
             <RentalSection />
             <Stats />
             <ServicesSection />
             <FreedomSection />
             <TogetherSection />
-            <AppPromotion />
             <CallToAction1 />
+            <AppPromotion />
             <News />
             <Reviews />
             <Blog />
             <CallToAction2 />
-        </>
+        </main>
     );
 };
 
