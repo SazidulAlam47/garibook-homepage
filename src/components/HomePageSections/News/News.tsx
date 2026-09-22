@@ -21,7 +21,6 @@ const News = () => {
     return (
         <section className="py-14 sm:py-20 bg-white">
             <Container>
-                {/* Header with Navigation Controls */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 sm:mb-12">
                     <div>
                         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#121212] tracking-tight">
@@ -64,12 +63,11 @@ const News = () => {
                     </div>
                 </div>
 
-                {/* News Carousel / Grid */}
                 <div ref={sliderContainerRef} className="overflow-hidden">
                     <div
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-transform duration-500 ease-out"
                         style={{
-                            transform: `translateX(-${startIndex * 0}%)`, // On desktop we can also slice or slide smoothly
+                            transform: `translateX(-${startIndex * 0}%)`,
                         }}
                     >
                         {newsList.slice(startIndex, startIndex + visibleCount).map((item) => (

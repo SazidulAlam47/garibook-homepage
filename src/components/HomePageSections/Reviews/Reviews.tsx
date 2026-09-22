@@ -40,7 +40,6 @@ const Reviews = () => {
     return (
         <section className="py-16 sm:py-24 bg-[#f1f6ff] relative overflow-hidden">
             <Container>
-                {/* Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14">
                     <div className="max-w-2xl">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#121212] tracking-tight mb-4">
@@ -86,7 +85,6 @@ const Reviews = () => {
                     </div>
                 </div>
 
-                {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {reviewsList.slice(startIndex, startIndex + visibleCount).map((item) => (
                         <ReviewsCard
@@ -98,7 +96,6 @@ const Reviews = () => {
                 </div>
             </Container>
 
-            {/* Video Modal Popup */}
             {selectedVideo && (
                 <div
                     onClick={() => setSelectedVideo(null)}

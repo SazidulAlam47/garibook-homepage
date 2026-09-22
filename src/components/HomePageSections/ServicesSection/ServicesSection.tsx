@@ -48,14 +48,12 @@ const ServicesSection = () => {
     return (
         <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 bg-white">
             <Container>
-                {/* Header */}
                 <div className="mb-6 sm:mb-8">
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-[#121212] tracking-tight">
                         Our Services
                     </h2>
                 </div>
 
-                {/* Service Tabs */}
                 <div className="flex items-center gap-2 sm:gap-3 flex-wrap border-b border-gray-100 pb-4 mb-8 sm:mb-12">
                     <button
                         type="button"
@@ -106,7 +104,6 @@ const ServicesSection = () => {
                     </button>
                 </div>
 
-                {/* Tab Contents */}
                 {activeTab === "rides" && (
                     <div>
                         <div className="mb-6 sm:mb-8">

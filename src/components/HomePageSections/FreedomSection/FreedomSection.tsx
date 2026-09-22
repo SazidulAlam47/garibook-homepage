@@ -52,14 +52,12 @@ const FreedomSection = () => {
     return (
         <section ref={sectionRef} className="bg-black text-white py-16 sm:py-20 md:py-24 overflow-hidden">
             <Container>
-                {/* Header */}
                 <div className="max-w-2xl mb-8 sm:mb-12">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
                         Freedom in Every Journey
                     </h2>
                 </div>
 
-                {/* Banner Image */}
                 <div className="freedom-banner-img rounded-3xl overflow-hidden mb-12 sm:mb-16 shadow-2xl border border-white/10">
                     <img
                         src={freedomBanner}
@@ -68,7 +66,6 @@ const FreedomSection = () => {
                     />
                 </div>
 
-                {/* 3 Features */}
                 <div className="freedom-features-grid grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-14">
                     {freedomFeatures.map((item) => (
                         <FreedomSingle

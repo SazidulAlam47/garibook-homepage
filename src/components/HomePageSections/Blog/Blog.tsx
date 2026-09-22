@@ -7,7 +7,6 @@ const Blog = () => {
     return (
         <section className="py-16 sm:py-24 bg-white">
             <Container>
-                {/* Header with Link to All Blogs */}
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 sm:mb-14">
                     <div className="max-w-2xl">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#121212] tracking-tight mb-3">
@@ -31,7 +30,6 @@ const Blog = () => {
                     </div>
                 </div>
 
-                {/* 3 Blog Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {blogList.map((item) => (
                         <BlogCard key={item.id} item={item} />

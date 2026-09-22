@@ -10,7 +10,6 @@ const FooterUpper = () => {
     return (
         <div className="py-12 sm:py-16 border-b border-gray-800">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
-                {/* Column 1: Garibook */}
                 <div className="lg:col-span-3">
                     <h6 className="text-white font-bold text-lg mb-5 capitalize tracking-wide">
                         garibook
@@ -37,7 +36,6 @@ const FooterUpper = () => {
                     </ul>
                 </div>
 
-                {/* Column 2: Services */}
                 <div className="lg:col-span-3">
                     <h6 className="text-white font-bold text-lg mb-5 capitalize tracking-wide">
                         Services
@@ -53,7 +51,6 @@ const FooterUpper = () => {
                     </ul>
                 </div>
 
-                {/* Column 3: Become Our Partner */}
                 <div className="lg:col-span-3">
                     <h6 className="text-white font-bold text-lg mb-5 capitalize tracking-wide">
                         Become Our Partner
@@ -69,7 +66,6 @@ const FooterUpper = () => {
                     </ul>
                 </div>
 
-                {/* Column 4: Contacts */}
                 <div className="lg:col-span-3">
                     <h6 className="text-white font-bold text-lg mb-5 capitalize tracking-wide">
                         Contacts

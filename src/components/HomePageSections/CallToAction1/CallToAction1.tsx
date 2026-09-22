@@ -11,7 +11,6 @@ const CallToAction1 = () => {
     return (
         <section className="bg-black text-white py-16 sm:py-20 md:py-24 overflow-hidden">
             <Container>
-                {/* Header and CTA Button */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14">
                     <div className="max-w-xl">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
@@ -37,9 +36,7 @@ const CallToAction1 = () => {
                     </div>
                 </div>
 
-                {/* Mosaic Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    {/* Large image 1: explore */}
                     <div className="col-span-2 row-span-2 rounded-3xl overflow-hidden shadow-xl border border-white/10 group">
                         <img
                             src={exploreImg}
@@ -48,7 +45,6 @@ const CallToAction1 = () => {
                         />
                     </div>
 
-                    {/* Image 2: freedom */}
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 group aspect-[4/3] sm:aspect-auto">
                         <img
                             src={freedomImg}
@@ -57,7 +53,6 @@ const CallToAction1 = () => {
                         />
                     </div>
 
-                    {/* Image 3: safe travel */}
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 bg-slate-900 flex items-center justify-center p-6 group aspect-[4/3] sm:aspect-auto">
                         <img
                             src={safeTravelImg}
@@ -66,7 +61,6 @@ const CallToAction1 = () => {
                         />
                     </div>
 
-                    {/* Image 4: preferred car */}
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 group aspect-[4/3] sm:aspect-auto">
                         <img
                             src={preferredCarImg}
@@ -75,7 +69,6 @@ const CallToAction1 = () => {
                         />
                     </div>
 
-                    {/* Image 5: smooth */}
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 group aspect-[4/3] sm:aspect-auto">
                         <img
                             src={smoothImg}

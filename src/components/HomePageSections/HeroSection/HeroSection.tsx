@@ -22,7 +22,6 @@ const HeroSection = () => {
                 "-=0.6"
             );
 
-            // Subtle floating loop on the decorative element
             gsap.to(".hero-floating-element", {
                 y: -14,
                 duration: 2.5,

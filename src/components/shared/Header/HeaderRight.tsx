@@ -11,7 +11,6 @@ const HeaderRight = ({ onToggleMobileMenu, isMobileMenuOpen }: HeaderRightProps)
 
     return (
         <div className="flex items-center gap-3 sm:gap-4">
-            {/* Language toggle */}
             <button
                 type="button"
                 onClick={toggleLanguage}
@@ -28,7 +27,6 @@ const HeaderRight = ({ onToggleMobileMenu, isMobileMenuOpen }: HeaderRightProps)
                 <span>{language === "en" ? "English" : "বাংলা"}</span>
             </button>
 
-            {/* Desktop Login */}
             <Link
                 to="/login"
                 className="hidden lg:inline-flex items-center justify-center px-6 py-2 rounded-full bg-[#0e52ff] hover:bg-blue-700 text-white font-semibold text-sm transition-all duration-200 capitalize shadow-sm hover:shadow active:scale-95"
@@ -36,7 +34,6 @@ const HeaderRight = ({ onToggleMobileMenu, isMobileMenuOpen }: HeaderRightProps)
                 login
             </Link>
 
-            {/* Mobile Hamburger toggle */}
             <button
                 type="button"
                 onClick={onToggleMobileMenu}

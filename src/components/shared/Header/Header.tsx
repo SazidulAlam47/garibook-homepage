@@ -19,7 +19,6 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Prevent body scrolling when mobile menu is open
     useEffect(() => {
         if (isMobileMenuOpen) {
             document.body.style.overflow = "hidden";
@@ -51,7 +50,6 @@ const Header = () => {
                 </div>
             </Container>
 
-            {/* Mobile Drawer Backdrop */}
             {isMobileMenuOpen && (
                 <div
                     onClick={closeMenu}
@@ -60,13 +58,11 @@ const Header = () => {
                 />
             )}
 
-            {/* Mobile Offcanvas Drawer */}
             <div
                 className={`fixed top-0 right-0 bottom-0 w-[300px] max-w-[85vw] bg-white z-50 shadow-2xl flex flex-col justify-between transform transition-transform duration-300 ease-in-out lg:hidden ${
                     isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
                 }`}
             >
-                {/* Header in Drawer */}
                 <div className="p-5 border-b border-gray-100 flex items-center justify-between">
                     <img src={logo} alt="Garibook" className="h-8 w-auto object-contain" />
                     <button
@@ -81,7 +77,6 @@ const Header = () => {
                     </button>
                 </div>
 
-                {/* Navigation in Drawer */}
                 <div className="px-5 py-6 flex flex-col gap-4 overflow-y-auto flex-1">
                     {navLinks.map((link) => (
                         <Link
@@ -105,7 +100,6 @@ const Header = () => {
                     </div>
                 </div>
 
-                {/* Bottom decorative logo vector */}
                 <div className="p-4 flex justify-center opacity-60 pointer-events-none">
                     <img src={logoVector} alt="" className="w-28 h-auto object-contain" />
                 </div>

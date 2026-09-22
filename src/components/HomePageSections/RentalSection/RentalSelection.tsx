@@ -38,7 +38,6 @@ const RentalSelection = () => {
     const carDropdownRef = useRef<HTMLDivElement>(null);
     const airportDropdownRef = useRef<HTMLDivElement>(null);
 
-    // Close dropdowns on outside click
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent) => {
             if (carDropdownRef.current && !carDropdownRef.current.contains(e.target as Node)) {
@@ -89,7 +88,6 @@ const RentalSelection = () => {
 
     return (
         <div className="bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-slate-100 p-5 sm:p-7 md:p-9 relative z-20">
-            {/* Top Tabs */}
             <div className="flex items-center gap-3 border-b border-gray-100 pb-4 mb-6 sm:mb-8">
                 <button
                     type="button"
@@ -131,9 +129,7 @@ const RentalSelection = () => {
             </div>
 
             <form onSubmit={handleContinue}>
-                {/* Inputs Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                    {/* 1. Choose a Car */}
                     <div className="flex flex-col relative" ref={carDropdownRef}>
                         <label className="flex items-center gap-2 text-sm font-semibold text-slate-800 mb-2">
                             <img src={carIcon} alt="" className="w-5 h-5 object-contain" />
@@ -167,7 +163,6 @@ const RentalSelection = () => {
                             <img src={downArrow} alt="" className="w-3.5 h-auto object-contain opacity-70" />
                         </button>
 
-                        {/* Car Dropdown Menu */}
                         {isCarDropdownOpen && (
                             <div className="absolute top-[82px] left-0 right-0 bg-white border border-gray-100 rounded-2xl shadow-2xl py-2 z-50 max-h-72 overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
                                 {availableCars.map((car) => (
@@ -204,7 +199,6 @@ const RentalSelection = () => {
                         {errors.car && <span className="text-xs text-red-500 mt-1">{errors.car}</span>}
                     </div>
 
-                    {/* 2. Pickup Location (or Airport if Airport Rental and From Airport) */}
                     {activeTab === "airport" && airportDirection === "fromAirport" ? (
                         <div className="flex flex-col relative" ref={airportDropdownRef}>
                             <label className="flex items-center gap-2 text-sm font-semibold text-slate-800 mb-2">
@@ -270,7 +264,6 @@ const RentalSelection = () => {
                         </div>
                     )}
 
-                    {/* 3. Drop-off Location (or Airport if Airport Rental and From Home) */}
                     {activeTab === "airport" && airportDirection === "fromHome" ? (
                         <div className="flex flex-col relative" ref={airportDropdownRef}>
                             <label className="flex items-center gap-2 text-sm font-semibold text-slate-800 mb-2">
@@ -336,7 +329,6 @@ const RentalSelection = () => {
                         </div>
                     )}
 
-                    {/* 4. Pickup Date & Time */}
                     <div className="flex flex-col">
                         <label className="flex items-center gap-2 text-sm font-semibold text-slate-800 mb-2">
                             <img src={calendarIcon} alt="" className="w-5 h-5 object-contain" />
@@ -352,7 +344,6 @@ const RentalSelection = () => {
                     </div>
                 </div>
 
-                {/* Popular city suggestions helper pills */}
                 <div className="mt-3 flex items-center gap-2 flex-wrap">
                     <span className="text-xs text-slate-400 font-medium">Quick suggestions:</span>
                     {popularCities.slice(0, 4).map((city) => (
@@ -370,7 +361,6 @@ const RentalSelection = () => {
                     ))}
                 </div>
 
-                {/* Bottom Row: Radios + Continue Button */}
                 <div className="mt-8 pt-4 border-t border-gray-100 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
                     {activeTab === "car" ? (
                         <div className="flex items-center gap-6 sm:gap-8 flex-wrap">

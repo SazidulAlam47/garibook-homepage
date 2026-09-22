@@ -60,18 +60,15 @@ const Stats = () => {
         <section ref={sectionRef} className="pb-12 sm:pb-16 lg:pb-20">
             <Container>
                 <div className="bg-[#0e52ff] rounded-3xl p-8 sm:p-10 md:p-14 text-white shadow-xl shadow-blue-600/15 relative overflow-hidden">
-                    {/* Background subtle radial glow */}
                     <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl pointer-events-none" />
 
                     <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 lg:gap-12">
-                        {/* Title */}
                         <div className="max-w-xl">
                             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold leading-tight tracking-tight">
                                 From Everyday Rides to <br className="hidden sm:inline" /> Meaningful Journeys
                             </h2>
                         </div>
 
-                        {/* Stats Numbers */}
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
                             {statsData.map((stat, idx) => (
                                 <div key={stat.label} className="stat-item flex flex-col items-start lg:items-end">

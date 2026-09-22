@@ -17,7 +17,6 @@ const HeroLeft = () => {
                 if (displayText.length < fullString.length) {
                     setDisplayText(fullString.slice(0, displayText.length + 1));
                 } else {
-                    // Pause before deleting
                     setTimeout(() => setIsDeleting(true), 2200);
                 }
             } else {
@@ -33,7 +32,6 @@ const HeroLeft = () => {
         return () => clearTimeout(timer);
     }, [displayText, isDeleting, titleIndex]);
 
-    // Format current typed text to highlight the designated keyword in blue
     const currentItem = titles[titleIndex];
     const prefixLen = currentItem.prefix.length;
     const highlightLen = currentItem.highlight.length;

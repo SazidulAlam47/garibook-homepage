@@ -5,7 +5,6 @@ const FooterMiddle = () => {
     return (
         <div className="py-12 sm:py-16 border-b border-gray-800">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                {/* Left: App Download */}
                 <div className="lg:col-span-5">
                     <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight mb-6">
                         Download Our <br />
@@ -27,7 +26,6 @@ const FooterMiddle = () => {
                     </a>
                 </div>
 
-                {/* Right: Product By & Powered By */}
                 <div className="lg:col-span-7 flex flex-col sm:flex-row items-start sm:items-center justify-start lg:justify-end gap-8 sm:gap-12">
                     {footerPartners.map((partner) => (
                         <div key={partner.title}>

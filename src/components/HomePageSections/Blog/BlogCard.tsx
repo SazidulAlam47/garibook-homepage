@@ -7,7 +7,6 @@ const BlogCard = ({ item }: BlogCardProps) => {
             to={`/blogs/${item.slug}`}
             className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300"
         >
-            {/* Blog Image */}
             <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
                     src={item.image}
@@ -16,7 +15,6 @@ const BlogCard = ({ item }: BlogCardProps) => {
                 />
             </div>
 
-            {/* Blog Content */}
             <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
                     <span className="text-xs font-semibold text-slate-400 block mb-2">

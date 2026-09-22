@@ -24,7 +24,6 @@ const HeroRight = () => {
                 </a>
             </div>
 
-            {/* Decorative 3D Isometric Element */}
             <div className="hero-floating-element hidden md:block absolute -bottom-16 right-0 lg:-right-8 w-24 h-24 lg:w-32 lg:h-32 opacity-75 pointer-events-none select-none">
                 <img
                     src={heroImg}

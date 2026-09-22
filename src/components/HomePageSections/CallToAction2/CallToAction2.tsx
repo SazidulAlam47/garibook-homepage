@@ -6,7 +6,6 @@ const CallToAction2 = () => {
         <section className="py-12 sm:py-16 md:py-20 bg-white">
             <Container>
                 <div className="bg-[#0e52ff] rounded-3xl p-8 sm:p-12 md:p-16 relative overflow-hidden shadow-2xl text-white">
-                    {/* Background subtle decorative circle */}
                     <div className="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none" />
 
                     <div className="relative z-10 max-w-2xl">

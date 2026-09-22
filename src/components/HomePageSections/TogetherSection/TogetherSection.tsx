@@ -36,7 +36,6 @@ const TogetherSection = () => {
     return (
         <section ref={sectionRef} className="py-14 sm:py-20 bg-white">
             <Container>
-                {/* Header */}
                 <div className="max-w-2xl mb-8 sm:mb-12">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#121212] tracking-tight leading-tight">
                         More Than Miles — <br className="hidden sm:inline" />
@@ -44,7 +43,6 @@ const TogetherSection = () => {
                     </h2>
                 </div>
 
-                {/* 3 Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                     {togetherCards.map((card) => (
                         <TogetherCard

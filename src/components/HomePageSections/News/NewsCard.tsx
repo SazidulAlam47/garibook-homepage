@@ -8,7 +8,6 @@ const NewsCard = ({ item }: NewsCardProps) => {
             rel="noopener noreferrer"
             className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300"
         >
-            {/* Image banner */}
             <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                 <img
                     src={item.image}
@@ -17,7 +16,6 @@ const NewsCard = ({ item }: NewsCardProps) => {
                 />
             </div>
 
-            {/* Content */}
             <div className="p-6 flex flex-col flex-1 justify-between">
                 <div>
                     <span className="text-xs font-semibold text-slate-400 block mb-2">
@@ -31,7 +29,6 @@ const NewsCard = ({ item }: NewsCardProps) => {
                     </p>
                 </div>
 
-                {/* Brand Logo & Read Article Link */}
                 <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
                     <img
                         src={item.brandLogo}

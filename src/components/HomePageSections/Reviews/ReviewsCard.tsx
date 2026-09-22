@@ -10,7 +10,6 @@ const ReviewsCard = ({ item, onPlay }: ReviewsCardProps) => {
             aria-label={`Watch testimonial video of ${item.name}, ${item.occupation}`}
             className="w-full text-left group cursor-pointer flex flex-col h-full bg-white rounded-3xl p-4 sm:p-5 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0e52ff]"
         >
-            {/* Video Thumbnail with Play Button */}
             <div className="relative aspect-[16/10] rounded-2xl overflow-hidden bg-slate-900 w-full">
                 <img
                     src={item.thumbnail}
@@ -18,7 +17,6 @@ const ReviewsCard = ({ item, onPlay }: ReviewsCardProps) => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                 />
 
-                {/* Play Button Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#0e52ff] text-white flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:bg-blue-600 transition-all duration-300">
                         <svg className="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 384 512">
@@ -28,7 +26,6 @@ const ReviewsCard = ({ item, onPlay }: ReviewsCardProps) => {
                 </div>
             </div>
 
-            {/* Author info & Rating */}
             <div className="pt-5 pb-2 text-left flex-1 flex flex-col justify-between">
                 <div>
                     <div className="flex items-center gap-1 mb-2 text-[#fdd300]" aria-label={`${rating} out of 5 stars`}>
