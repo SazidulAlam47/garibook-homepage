@@ -8,7 +8,7 @@ const FooterBottom = () => {
         <div className="pt-8 pb-4">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-8 text-center lg:text-left">
                 <div className="flex flex-col sm:flex-row items-center gap-6">
-                    <img src={logo} alt="Garibook" className="h-10 w-auto object-contain" />
+                    <img src={logo} alt="Garibook" className="h-9 sm:h-11 w-auto max-w-[160px] object-contain" />
                     <div className="flex items-center gap-6 text-sm text-gray-400">
                         {footerLegalLinks.map((link, idx) => (
                             <span key={link.label} className="flex items-center gap-6">

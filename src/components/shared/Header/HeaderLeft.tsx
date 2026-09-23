@@ -10,7 +10,7 @@ const HeaderLeft = ({ onLinkClick }: HeaderLeftProps) => {
                 <img
                     src={logo}
                     alt="Garibook"
-                    className="h-10 sm:h-12 w-auto object-contain"
+                    className="h-9 sm:h-11 w-auto max-w-[160px] object-contain"
                 />
             </Link>
 

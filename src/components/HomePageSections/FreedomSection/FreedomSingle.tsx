@@ -2,9 +2,9 @@ import type { FreedomSingleProps } from "../../../types/freedom.type";
 
 const FreedomSingle = ({ icon, title, description }: FreedomSingleProps) => {
     return (
-        <div className="freedom-single flex flex-col items-start gap-4">
-            <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center p-3 border border-white/10 transition-transform duration-300 hover:scale-110 hover:bg-white/15">
-                <img src={icon} alt={title} className="w-full h-full object-contain" />
+        <div className="freedom-single flex flex-col items-start">
+            <div className="h-12 mb-4 flex items-center justify-start">
+                <img src={icon} alt={title} className="h-10 sm:h-12 w-auto object-contain" />
             </div>
 
             <div className="text-left">

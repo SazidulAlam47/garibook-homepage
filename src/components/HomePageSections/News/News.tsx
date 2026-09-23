@@ -19,11 +19,11 @@ const News = () => {
     };
 
     return (
-        <section className="py-14 sm:py-20 bg-white">
+        <section className="passenger-speak-wrapper relative py-14 sm:py-18 lg:py-[70px] bg-white">
             <Container>
                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 sm:mb-12">
                     <div>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#121212] tracking-tight">
+                        <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold text-[#121212] tracking-tight">
                             We Featured by Top news Platforms
                         </h2>
                     </div>

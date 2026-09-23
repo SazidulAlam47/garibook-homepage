@@ -3,7 +3,7 @@ import RentalSelection from "./RentalSelection";
 
 const RentalSection = () => {
     return (
-        <section className="relative -mt-16 sm:-mt-20 md:-mt-24 z-30 mb-6 sm:mb-10">
+        <section className="relative -mt-36 sm:-mt-44 lg:-mt-[220px] z-30">
             <Container>
                 <RentalSelection />
             </Container>

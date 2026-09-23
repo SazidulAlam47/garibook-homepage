@@ -1,20 +1,13 @@
 import type { CardCardProps } from "../../../types/services.type";
 
-const CardCard = ({ icon, title, description, isActive, onClick }: CardCardProps) => {
+const CardCard = ({ icon, title, description }: CardCardProps) => {
     return (
-        <div
-            onClick={onClick}
-            className={`service-card h-full flex flex-col justify-start p-6 sm:p-7 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                isActive
-                    ? "bg-white border-[#0e52ff] shadow-[0_12px_32px_rgba(14,82,255,0.12)] ring-1 ring-[#0e52ff]"
-                    : "bg-white border-gray-100 hover:border-blue-200 hover:shadow-xl hover:-translate-y-1"
-            }`}
-        >
-            <div className="w-16 h-16 sm:w-20 sm:h-20 mb-6 flex items-center justify-center">
+        <div className="service-card group h-full flex flex-col justify-start p-6 sm:p-7 rounded-2xl bg-white border border-[#edf2f7] hover:border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <div className="w-20 h-16 mb-5 flex items-center justify-start overflow-visible">
                 <img
                     src={icon}
                     alt={title}
-                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="w-16 sm:w-20 h-12 sm:h-14 object-contain transition-transform duration-300 ease-out group-hover:translate-x-3.5"
                 />
             </div>
 

@@ -13,31 +13,27 @@ const TogetherSection = () => {
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
-            gsap.fromTo(
-                ".together-card",
-                { opacity: 0, y: 35 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 0.7,
-                    stagger: 0.15,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 75%",
-                    },
-                }
-            );
+            gsap.from(".together-card", {
+                opacity: 0,
+                y: 25,
+                duration: 0.7,
+                stagger: 0.15,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: sectionRef.current,
+                    start: "top 85%",
+                },
+            });
         }, sectionRef);
 
         return () => ctx.revert();
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-14 sm:py-20 bg-white">
+        <section ref={sectionRef} className="py-14 sm:py-18 lg:py-[70px] bg-white">
             <Container>
                 <div className="max-w-2xl mb-8 sm:mb-12">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#121212] tracking-tight leading-tight">
+                    <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold text-[#121212] tracking-tight leading-tight">
                         More Than Miles — <br className="hidden sm:inline" />
                         We Bring People Together
                     </h2>

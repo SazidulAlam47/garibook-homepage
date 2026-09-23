@@ -9,7 +9,7 @@ import type { ContainerProps } from "../../types/container.type";
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
     ({ asChild, children, className, ...props }, ref) => {
         const mergedClassName = cn(
-            "w-full max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8",
+            "w-full max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8",
             className,
         );
 

@@ -38,14 +38,14 @@ const Reviews = () => {
     }, [selectedVideo]);
 
     return (
-        <section className="py-16 sm:py-24 bg-[#f1f6ff] relative overflow-hidden">
+        <section className="passenger-speak-wrapper relative py-14 sm:py-18 lg:py-[70px] bg-[#f1f6ff] overflow-hidden">
             <Container>
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14">
-                    <div className="max-w-2xl">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#121212] tracking-tight mb-4">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12">
+                    <div className="max-w-3xl">
+                        <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold text-[#121212] tracking-tight mb-4">
                             Our Passengers Speak For Us
                         </h2>
-                        <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
+                        <p className="text-base sm:text-lg lg:text-[20px] lg:leading-[28px] text-[#6d6d6d] font-normal leading-relaxed">
                             Our journey was seamless and enjoyable from start to finish. The booking process was straightforward, and the staff were incredibly attentive, ensuring we felt comfortable throughout the trip.
                         </p>
                     </div>

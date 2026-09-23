@@ -5,14 +5,14 @@ import { blogList } from "../../../constants/blog.constant";
 
 const Blog = () => {
     return (
-        <section className="py-16 sm:py-24 bg-white">
+        <section className="blog-section-wrapper py-14 sm:py-18 lg:py-[70px] bg-white">
             <Container>
-                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 sm:mb-14">
+                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 sm:mb-12">
                     <div className="max-w-2xl">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#121212] tracking-tight mb-3">
+                        <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold text-[#121212] tracking-tight mb-3">
                             Beyond Destinations
                         </h2>
-                        <p className="text-base sm:text-lg text-slate-500 font-normal leading-relaxed">
+                        <p className="text-base sm:text-lg lg:text-[20px] text-[#6d6d6d] font-normal leading-relaxed">
                             Discover travel hacks, guides, and inspirations for your next intercity trip with Garibook.
                         </p>
                     </div>

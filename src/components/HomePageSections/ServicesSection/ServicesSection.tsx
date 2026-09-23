@@ -17,28 +17,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ServicesSection = () => {
     const [activeTab, setActiveTab] = useState<ServiceTab>("rides");
-    const [activeRideCard, setActiveRideCard] = useState<string>("intercity");
     const sectionRef = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             if (activeTab === "rides") {
-                gsap.fromTo(
-                    ".service-card",
-                    { opacity: 0, y: 25 },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        duration: 0.6,
-                        stagger: 0.1,
-                        ease: "power2.out",
-                        scrollTrigger: {
-                            trigger: sectionRef.current,
-                            start: "top 75%",
-                            toggleActions: "play none none none",
-                        },
-                    }
-                );
+                gsap.from(".service-card", {
+                    opacity: 0,
+                    y: 25,
+                    duration: 0.6,
+                    stagger: 0.1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 85%",
+                        toggleActions: "play none none none",
+                    },
+                });
             }
         }, sectionRef);
 
@@ -46,22 +41,22 @@ const ServicesSection = () => {
     }, [activeTab]);
 
     return (
-        <section ref={sectionRef} className="py-12 sm:py-16 lg:py-20 bg-white">
+        <section ref={sectionRef} className="py-14 sm:py-18 lg:py-[70px] bg-white">
             <Container>
                 <div className="mb-6 sm:mb-8">
-                    <h2 className="text-3xl sm:text-4xl font-extrabold text-[#121212] tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#121212] tracking-tight">
                         Our Services
                     </h2>
                 </div>
 
-                <div className="flex items-center gap-2 sm:gap-3 flex-wrap border-b border-gray-100 pb-4 mb-8 sm:mb-12">
+                <div className="flex items-center gap-3 sm:gap-4 flex-wrap pb-4 mb-8 sm:mb-12">
                     <button
                         type="button"
                         onClick={() => setActiveTab("rides")}
-                        className={`px-5 py-2.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 cursor-pointer ${
+                        className={`px-7 sm:px-11 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 cursor-pointer ${
                             activeTab === "rides"
                                 ? "bg-[#0e52ff] text-white shadow-md shadow-blue-500/20"
-                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                                : "bg-[#e9e9e9] text-[#121212] hover:bg-gray-200"
                         }`}
                     >
                         Rides
@@ -70,10 +65,10 @@ const ServicesSection = () => {
                     <button
                         type="button"
                         onClick={() => setActiveTab("business")}
-                        className={`px-5 py-2.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 cursor-pointer ${
+                        className={`px-7 sm:px-11 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 cursor-pointer ${
                             activeTab === "business"
                                 ? "bg-[#0e52ff] text-white shadow-md shadow-blue-500/20"
-                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                                : "bg-[#e9e9e9] text-[#121212] hover:bg-gray-200"
                         }`}
                     >
                         Garibook Business
@@ -82,10 +77,10 @@ const ServicesSection = () => {
                     <button
                         type="button"
                         onClick={() => setActiveTab("club")}
-                        className={`px-5 py-2.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 cursor-pointer ${
+                        className={`px-7 sm:px-11 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 cursor-pointer ${
                             activeTab === "club"
                                 ? "bg-[#0e52ff] text-white shadow-md shadow-blue-500/20"
-                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                                : "bg-[#e9e9e9] text-[#121212] hover:bg-gray-200"
                         }`}
                     >
                         Garibook Club
@@ -94,10 +89,10 @@ const ServicesSection = () => {
                     <button
                         type="button"
                         onClick={() => setActiveTab("vms")}
-                        className={`px-5 py-2.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 cursor-pointer ${
+                        className={`px-7 sm:px-11 py-3 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 cursor-pointer ${
                             activeTab === "vms"
                                 ? "bg-[#0e52ff] text-white shadow-md shadow-blue-500/20"
-                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                                : "bg-[#e9e9e9] text-[#121212] hover:bg-gray-200"
                         }`}
                     >
                         VMS
@@ -119,8 +114,6 @@ const ServicesSection = () => {
                                     icon={service.icon}
                                     title={service.title}
                                     description={service.description}
-                                    isActive={activeRideCard === service.id}
-                                    onClick={() => setActiveRideCard(service.id)}
                                 />
                             ))}
                         </div>

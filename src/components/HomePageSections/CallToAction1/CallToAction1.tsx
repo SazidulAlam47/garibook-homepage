@@ -9,11 +9,11 @@ import smoothImg from "../../../assets/smooth.jpg";
 
 const CallToAction1 = () => {
     return (
-        <section className="bg-black text-white py-16 sm:py-20 md:py-24 overflow-hidden">
+        <section className="booking-arrival-wrapper bg-black text-white py-14 sm:py-18 lg:py-[70px] overflow-hidden">
             <Container>
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-14">
-                    <div className="max-w-xl">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12">
+                    <div className="max-w-2xl">
+                        <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold tracking-tight text-white">
                             From Booking to Arrival <br className="hidden sm:inline" />
                             It’s All in Your Hands
                         </h2>
@@ -24,9 +24,9 @@ const CallToAction1 = () => {
                             href="https://onelink.to/gbweb?utm_source=Website&utm_medium=Webpage&utm_campaign=Homepage&utm_term=web&utm_content=page"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="theme-primary-btn group !inline-flex !justify-between"
+                            className="theme-primary-btn group inline-flex items-center gap-3 px-6 py-3.5 rounded-2xl shadow-md hover:shadow-lg"
                         >
-                            <span>Download App</span>
+                            <span className="font-semibold text-lg text-white">Download App</span>
                             <img
                                 src={rightArrow}
                                 alt=""
@@ -36,45 +36,51 @@ const CallToAction1 = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-                    <div className="col-span-2 row-span-2 rounded-3xl overflow-hidden shadow-xl border border-white/10 group">
-                        <img
-                            src={exploreImg}
-                            alt="Explore"
-                            className="w-full h-full object-cover min-h-[280px] sm:min-h-[380px] transition-transform duration-500 group-hover:scale-105"
-                        />
+                <div className="flex flex-col gap-4 sm:gap-6">
+                    {/* Row 1: 2/3 (Explore) + 1/3 (Freedom) */}
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
+                        <div className="md:col-span-8 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[260px] sm:h-[340px] lg:h-[420px]">
+                            <img
+                                src={exploreImg}
+                                alt="Explore"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            />
+                        </div>
+
+                        <div className="md:col-span-4 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[260px] sm:h-[340px] lg:h-[420px]">
+                            <img
+                                src={freedomImg}
+                                alt="Freedom"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            />
+                        </div>
                     </div>
 
-                    <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 group aspect-[4/3] sm:aspect-auto">
-                        <img
-                            src={freedomImg}
-                            alt="Freedom"
-                            className="w-full h-full object-cover min-h-[160px] sm:min-h-[180px] transition-transform duration-500 group-hover:scale-105"
-                        />
-                    </div>
+                    {/* Row 2: 1/3 (Safe Travel) + 1/3 (Preferred Car) + 1/3 (Smooth) */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-[#121212] flex items-center justify-center p-6 group h-[200px] sm:h-[260px] lg:h-[300px]">
+                            <img
+                                src={safeTravelImg}
+                                alt="Safe Travel"
+                                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            />
+                        </div>
 
-                    <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 bg-slate-900 flex items-center justify-center p-6 group aspect-[4/3] sm:aspect-auto">
-                        <img
-                            src={safeTravelImg}
-                            alt="Safe Travel"
-                            className="max-h-28 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
-                        />
-                    </div>
+                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[200px] sm:h-[260px] lg:h-[300px]">
+                            <img
+                                src={preferredCarImg}
+                                alt="Preferred Car"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            />
+                        </div>
 
-                    <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 group aspect-[4/3] sm:aspect-auto">
-                        <img
-                            src={preferredCarImg}
-                            alt="Preferred Car"
-                            className="w-full h-full object-cover min-h-[160px] sm:min-h-[180px] transition-transform duration-500 group-hover:scale-105"
-                        />
-                    </div>
-
-                    <div className="rounded-3xl overflow-hidden shadow-xl border border-white/10 group aspect-[4/3] sm:aspect-auto">
-                        <img
-                            src={smoothImg}
-                            alt="Smooth Travel"
-                            className="w-full h-full object-cover min-h-[160px] sm:min-h-[180px] transition-transform duration-500 group-hover:scale-105"
-                        />
+                        <div className="sm:col-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[200px] sm:h-[260px] lg:h-[300px]">
+                            <img
+                                src={smoothImg}
+                                alt="Smooth Travel"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                            />
+                        </div>
                     </div>
                 </div>
             </Container>

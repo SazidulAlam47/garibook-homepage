@@ -11,7 +11,7 @@ import { availableCars, airportList, popularCities } from "../../../constants/re
 
 const RentalSelection = () => {
     const [activeTab, setActiveTab] = useState<RentalTabType>("car");
-    const [selectedCar, setSelectedCar] = useState<CarOption | null>(null);
+    const [selectedCar, setSelectedCar] = useState<CarOption | null>(availableCars[0]);
     const [isCarDropdownOpen, setIsCarDropdownOpen] = useState(false);
     const [tripType, setTripType] = useState<TripType>("oneWay");
     const [airportDirection, setAirportDirection] = useState<AirportDirectionType>("fromAirport");

@@ -15,10 +15,10 @@ const HeaderRight = ({ onToggleMobileMenu, isMobileMenuOpen }: HeaderRightProps)
                 type="button"
                 onClick={toggleLanguage}
                 aria-label="Toggle language"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0e52ff] hover:bg-blue-700 text-white text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer shadow-sm active:scale-95"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 text-[#212121] text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer shadow-2xs active:scale-95"
             >
                 <svg
-                    className="w-4 h-4 fill-current"
+                    className="w-4 h-4 fill-current text-[#0e52ff]"
                     viewBox="0 0 640 512"
                     xmlns="http://www.w3.org/2000/svg"
                 >
@@ -29,7 +29,7 @@ const HeaderRight = ({ onToggleMobileMenu, isMobileMenuOpen }: HeaderRightProps)
 
             <Link
                 to="/login"
-                className="hidden lg:inline-flex items-center justify-center px-6 py-2 rounded-full bg-[#0e52ff] hover:bg-blue-700 text-white font-semibold text-sm transition-all duration-200 capitalize shadow-sm hover:shadow active:scale-95"
+                className="hidden lg:inline-flex items-center justify-center px-7 py-2 rounded-lg bg-[#0e52ff] hover:bg-blue-700 text-white font-medium text-base transition-all duration-200 capitalize shadow-xs hover:shadow active:scale-95"
             >
                 login
             </Link>

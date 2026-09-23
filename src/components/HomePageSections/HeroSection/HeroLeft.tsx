@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { heroTitles as titles } from "../../../constants/hero.constant";
 
 const HeroLeft = () => {
+    const initialString = `${titles[0].prefix}${titles[0].highlight}${titles[0].suffix || ""}`;
     const [titleIndex, setTitleIndex] = useState(0);
-    const [displayText, setDisplayText] = useState("");
+    const [displayText, setDisplayText] = useState(initialString);
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
@@ -53,8 +54,8 @@ const HeroLeft = () => {
 
     return (
         <div className="hero-left flex flex-col justify-center">
-            <div className="hero-title-container min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[210px] flex items-center">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[62px] font-extrabold text-[#121212] leading-[1.15] tracking-tight">
+            <div className="hero-title-container min-h-[120px] sm:min-h-[140px] md:min-h-[160px] lg:min-h-[180px] flex items-center">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[64px] font-bold text-[#121212] leading-[1.15] xl:leading-[72px] tracking-tight">
                     <span>{renderedPrefix}</span>
                     {renderedHighlight && (
                         <span className="text-[#0e52ff]">{renderedHighlight}</span>

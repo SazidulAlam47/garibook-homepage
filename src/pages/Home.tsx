@@ -13,7 +13,7 @@ import TogetherSection from "../components/HomePageSections/TogetherSection/Toge
 
 const Home = () => {
     return (
-        <main className="min-h-screen flex flex-col bg-white">
+        <main className="flex flex-col bg-white">
             <HeroSection />
             <RentalSection />
             <Stats />

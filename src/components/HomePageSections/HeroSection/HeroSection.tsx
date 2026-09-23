@@ -21,14 +21,6 @@ const HeroSection = () => {
                 { opacity: 1, y: 0, duration: 0.9 },
                 "-=0.6"
             );
-
-            gsap.to(".hero-floating-element", {
-                y: -14,
-                duration: 2.5,
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut",
-            });
         }, heroRef);
 
         return () => ctx.revert();
@@ -37,7 +29,7 @@ const HeroSection = () => {
     return (
         <section
             ref={heroRef}
-            className="homepage_hero_wrapper relative pt-12 sm:pt-16 md:pt-20 pb-24 sm:pb-28 md:pb-36 bg-gradient-to-b from-[#f4f7fe]/70 via-white to-white overflow-hidden"
+            className="homepage_hero_wrapper relative pt-14 sm:pt-20 lg:pt-[118px] pb-44 sm:pb-56 lg:pb-[290px] bg-gradient-to-b from-[#f4f7fe]/60 via-white to-white overflow-hidden"
         >
             <Container>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
