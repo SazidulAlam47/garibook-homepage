@@ -1,7 +1,5 @@
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../../ui/Container";
 import CardCard from "./CardCard";
 
@@ -13,35 +11,11 @@ import rightArrow from "../../../assets/right-arrow.png";
 import type { ServiceTab } from "../../../types/services.type";
 import { ridesServices } from "../../../constants/services.constant";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ServicesSection = () => {
     const [activeTab, setActiveTab] = useState<ServiceTab>("rides");
-    const sectionRef = useRef<HTMLDivElement>(null);
-
-    useLayoutEffect(() => {
-        const ctx = gsap.context(() => {
-            if (activeTab === "rides") {
-                gsap.from(".service-card", {
-                    opacity: 0,
-                    y: 25,
-                    duration: 0.6,
-                    stagger: 0.1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: sectionRef.current,
-                        start: "top 85%",
-                        toggleActions: "play none none none",
-                    },
-                });
-            }
-        }, sectionRef);
-
-        return () => ctx.revert();
-    }, [activeTab]);
 
     return (
-        <section ref={sectionRef} className="py-14 sm:py-18 lg:py-[70px] bg-white">
+        <section className="py-14 sm:py-18 lg:py-[70px] bg-white">
             <Container>
                 <div className="mb-6 sm:mb-8">
                     <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#121212] tracking-tight">
