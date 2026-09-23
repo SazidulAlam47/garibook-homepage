@@ -6,9 +6,9 @@ const NewsCard = ({ item }: NewsCardProps) => {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300"
+            className="group flex flex-col h-full bg-white overflow-hidden transition-all duration-300"
         >
-            <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+            <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 rounded-2xl">
                 <img
                     src={item.image}
                     alt={item.title}
@@ -36,7 +36,7 @@ const NewsCard = ({ item }: NewsCardProps) => {
                         className="h-6 sm:h-7 w-auto object-contain max-w-[120px]"
                     />
                     <span className="text-xs font-bold text-[#0e52ff] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                        Read More →
+                        Read Article →
                     </span>
                 </div>
             </div>

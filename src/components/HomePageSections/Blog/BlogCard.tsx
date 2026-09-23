@@ -5,9 +5,9 @@ const BlogCard = ({ item }: BlogCardProps) => {
     return (
         <Link
             to={`/blogs/${item.slug}`}
-            className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300"
+            className="group flex flex-col h-full bg-white transition-all duration-300"
         >
-            <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+            <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 rounded-2xl">
                 <img
                     src={item.image}
                     alt={item.title}
@@ -26,12 +26,6 @@ const BlogCard = ({ item }: BlogCardProps) => {
                     <p className="text-sm text-slate-500 font-normal line-clamp-2 leading-relaxed">
                         {item.subTitle}
                     </p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
-                    <span className="text-xs font-bold text-[#0e52ff] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                        Read Full Article →
-                    </span>
                 </div>
             </div>
         </Link>

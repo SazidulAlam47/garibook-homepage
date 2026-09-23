@@ -35,14 +35,20 @@ const CallToAction2 = () => {
                         </a>
                     </div>
 
-                    <div className="hidden lg:block absolute -top-16 lg:-top-20 right-6 lg:right-12 xl:right-20 z-20 pointer-events-none select-none">
-                        <img
-                            src={appImg}
-                            alt="Garibook Mobile App"
-                            className="w-auto h-[460px] lg:h-[520px] xl:h-[560px] object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.3)]"
-                        />
+                    {/* Wrapper/layering structure: keeps top overflow visible while clipping bottom overflow at container's bottom edge */}
+                    <div className="hidden lg:block absolute inset-x-0 bottom-0 -top-40 overflow-hidden rounded-b-3xl pointer-events-none select-none z-20">
+                        <div className="absolute inset-x-0 bottom-0 top-40">
+                            <div className="absolute -top-16 lg:-top-20 right-6 lg:right-12 xl:right-20">
+                                <img
+                                    src={appImg}
+                                    alt="Garibook Mobile App"
+                                    className="w-auto h-[460px] lg:h-[520px] xl:h-[560px] object-contain drop-shadow-[0_25px_35px_rgba(0,0,0,0.3)]"
+                                />
+                            </div>
+                        </div>
                     </div>
 
+                    {/* Mobile/Tablet image */}
                     <div className="lg:hidden mt-8 flex justify-center">
                         <img
                             src={appImg}

@@ -9,12 +9,13 @@ import smoothImg from "../../../assets/smooth.jpg";
 
 const CallToAction1 = () => {
     return (
-        <section className="booking-arrival-wrapper bg-black text-white py-14 sm:py-18 lg:py-[70px] overflow-hidden">
+        <section className="booking-arrival-wrapper bg-black text-white py-14 sm:py-18 lg:py-[60px] overflow-hidden">
             <Container>
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12">
                     <div className="max-w-2xl">
                         <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold tracking-tight text-white">
-                            From Booking to Arrival <br className="hidden sm:inline" />
+                            From Booking to Arrival{" "}
+                            <br className="hidden sm:inline" />
                             It’s All in Your Hands
                         </h2>
                     </div>
@@ -26,7 +27,9 @@ const CallToAction1 = () => {
                             rel="noopener noreferrer"
                             className="theme-primary-btn group inline-flex items-center gap-3 px-6 py-3.5 rounded-2xl shadow-md hover:shadow-lg"
                         >
-                            <span className="font-semibold text-lg text-white">Download App</span>
+                            <span className="font-semibold text-lg text-white">
+                                Download App
+                            </span>
                             <img
                                 src={rightArrow}
                                 alt=""
