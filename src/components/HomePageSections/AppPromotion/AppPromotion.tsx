@@ -5,7 +5,7 @@ import { SMART_DRIVER_APP_URL } from "../../../constants/appPromotion.constant";
 
 const AppPromotion = () => {
     return (
-        <section className="no-commission-wrapper bg-white overflow-hidden">
+        <section className="no-commission-wrapper  py-10 sm:py-12 lg:py-12 lg:pt-14 bg-white overflow-hidden">
             <Container>
                 <div className="mb-6 sm:mb-8">
                     <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold text-[#121212] tracking-tight">

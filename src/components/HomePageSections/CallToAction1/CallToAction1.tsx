@@ -61,15 +61,15 @@ const CallToAction1 = () => {
 
                     {/* Row 2: 1/3 (Safe Travel) + 1/3 (Preferred Car) + 1/3 (Smooth) */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
-                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-[#121212] flex items-center justify-center p-5 group h-[170px] sm:h-[220px] lg:h-[260px]">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group aspect-square bg-white">
                             <img
                                 src={safeTravelImg}
                                 alt="Safe Travel"
-                                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-103"
                             />
                         </div>
 
-                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[170px] sm:h-[220px] lg:h-[260px] bg-white">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group aspect-square bg-white">
                             <img
                                 src={preferredCarImg}
                                 alt="Preferred Car"
@@ -77,7 +77,7 @@ const CallToAction1 = () => {
                             />
                         </div>
 
-                        <div className="sm:col-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[170px] sm:h-[220px] lg:h-[260px] bg-[#ffe400]">
+                        <div className="sm:col-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group aspect-square bg-[#ffe400]">
                             <img
                                 src={smoothImg}
                                 alt="Smooth Travel"
