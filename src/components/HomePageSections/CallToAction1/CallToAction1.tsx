@@ -9,11 +9,11 @@ import smoothImg from "../../../assets/smooth.jpg";
 
 const CallToAction1 = () => {
     return (
-        <section className="booking-arrival-wrapper bg-black text-white py-14 sm:py-18 lg:py-[60px] overflow-hidden">
+        <section className="booking-arrival-wrapper bg-black text-white py-10 sm:py-12 lg:py-12 overflow-hidden">
             <Container>
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 sm:mb-12">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 sm:mb-10">
                     <div className="max-w-2xl">
-                        <h2 className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[54px] font-bold tracking-tight text-white">
+                        <h2 className="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[50px] font-bold tracking-tight text-white">
                             From Booking to Arrival{" "}
                             <br className="hidden sm:inline" />
                             It’s All in Your Hands
@@ -39,29 +39,29 @@ const CallToAction1 = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-4 sm:gap-6">
+                <div className="flex flex-col gap-4 sm:gap-5">
                     {/* Row 1: 2/3 (Explore) + 1/3 (Freedom) */}
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6">
-                        <div className="md:col-span-8 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[260px] sm:h-[340px] lg:h-[420px]">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-5">
+                        <div className="md:col-span-8 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[220px] sm:h-[280px] lg:h-[350px] bg-[#111]">
                             <img
                                 src={exploreImg}
                                 alt="Explore"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-103"
                             />
                         </div>
 
-                        <div className="md:col-span-4 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[260px] sm:h-[340px] lg:h-[420px]">
+                        <div className="md:col-span-4 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[220px] sm:h-[280px] lg:h-[350px] bg-white">
                             <img
                                 src={freedomImg}
                                 alt="Freedom"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                                className="w-full h-full object-cover object-top sm:object-center transition-transform duration-500 group-hover:scale-103"
                             />
                         </div>
                     </div>
 
                     {/* Row 2: 1/3 (Safe Travel) + 1/3 (Preferred Car) + 1/3 (Smooth) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-[#121212] flex items-center justify-center p-6 group h-[200px] sm:h-[260px] lg:h-[300px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-[#121212] flex items-center justify-center p-5 group h-[170px] sm:h-[220px] lg:h-[260px]">
                             <img
                                 src={safeTravelImg}
                                 alt="Safe Travel"
@@ -69,19 +69,19 @@ const CallToAction1 = () => {
                             />
                         </div>
 
-                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[200px] sm:h-[260px] lg:h-[300px]">
+                        <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[170px] sm:h-[220px] lg:h-[260px] bg-white">
                             <img
                                 src={preferredCarImg}
                                 alt="Preferred Car"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-103"
                             />
                         </div>
 
-                        <div className="sm:col-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[200px] sm:h-[260px] lg:h-[300px]">
+                        <div className="sm:col-span-2 md:col-span-1 rounded-3xl overflow-hidden shadow-2xl border border-white/10 group h-[170px] sm:h-[220px] lg:h-[260px] bg-[#ffe400]">
                             <img
                                 src={smoothImg}
                                 alt="Smooth Travel"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                                className="w-full h-full object-cover object-top sm:object-center transition-transform duration-500 group-hover:scale-103"
                             />
                         </div>
                     </div>
